@@ -1,5 +1,5 @@
 ---
-title: "논문정리"
+title: "[논문리뷰] DeepSORT"
 date: 2022-10-28T15:25:25.657890+09:00
 lastmod: 2022-10-28T15:25:25.657890+09:00
 hero: 
@@ -8,8 +8,8 @@ description:
 tags: 
 menu:
   sidebar:
-    name: 논문정리
-    identifier: 논문정리
+    name: 논문리뷰
+    identifier: 논문리뷰
     parent: 
     weight: 
 ---
@@ -56,7 +56,7 @@ Last Updated Date : 2022-04-15
 - How does Kalman Filter predict?
     - 이전 프레임의 예측값의 분포(Predicted state estimate) + 현재 프레임의 측정값 분포(Measurement) ⇒ 최적 추정 값(Optimal State Estimate)
         
-        ![img1.daumcdn.jpg](images/pic-0009.jpg)
+        ![img1.daumcdn.jpg](./images/pic-0009.jpg)
         
         → 예측값과 측정값의 각각의 Gaussian Distribution을 이용해 상태를 업데이트 해 최적의 추정값을 얻습니다.
         
