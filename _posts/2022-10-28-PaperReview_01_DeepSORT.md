@@ -12,6 +12,10 @@ menu:
     identifier: 논문리뷰
     parent: 
     weight: 
+categories:
+    - 논문리뷰
+tags:
+    - CV
 ---
 
 
