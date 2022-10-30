@@ -59,8 +59,8 @@ Last Updated Date : 2022-04-15
 - **이전 프레임(또는 stage)에 등장한 개체를 이용하여 다음 프레임 개체의 위치를 예측하고 측정하는 방법**입니다.
 - How does Kalman Filter predict?
     - 이전 프레임의 예측값의 분포(Predicted state estimate) + 현재 프레임의 측정값 분포(Measurement) ⇒ 최적 추정 값(Optimal State Estimate)
-        <img src = "./images/pic-0009.jpg"/>
-        <!-- ![img1.daumcdn.jpg](./images/pic-0009.jpg) -->
+        <!-- <img src = "./images/pic-0009.jpg"/> -->
+        ![img1.daumcdn.jpg](/_posts/images/pic-0009.jpg)
         
         → 예측값과 측정값의 각각의 Gaussian Distribution을 이용해 상태를 업데이트 해 최적의 추정값을 얻습니다.
         
