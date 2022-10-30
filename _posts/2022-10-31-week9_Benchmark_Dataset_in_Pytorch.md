@@ -1,3 +1,22 @@
+---
+title: "[학부수업] 딥러닝의 이해 - 9주차-2"
+date: 2022-10-28T15:25:25.657890+09:00
+lastmod: 2022-10-28T15:25:25.657890+09:00
+hero: 
+url: //
+description: 
+tags: 
+menu:
+  sidebar:
+    name: 학부수업
+    identifier: 학부수업
+    parent: 
+    weight: 
+categories:
+    - 학부수업
+tags:
+    - CV, DeepLearning
+---
 ```python
 import torch
 from torch.utils.data import Dataset
