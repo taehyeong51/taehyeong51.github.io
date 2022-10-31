@@ -1,5 +1,7 @@
 ---
 title: "[학부수업] 딥러닝의 이해 - 9주차-1"
+excerpt: "딥러닝의 이해 - 9주차-1 수업 내용"
+
 date: 2022-10-28T15:25:25.657890+09:00
 lastmod: 2022-10-28T15:25:25.657890+09:00
 hero: 
@@ -15,7 +17,8 @@ menu:
 categories:
     - 학부수업
 tags:
-    - CV, DeepLearning
+    - CV
+    - DeepLearning
 ---
 # torch를 import
 
