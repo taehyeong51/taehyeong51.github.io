@@ -61,7 +61,8 @@ Last Updated Date : 2022-04-15
 - How does Kalman Filter predict?
     - 이전 프레임의 예측값의 분포(Predicted state estimate) + 현재 프레임의 측정값 분포(Measurement) ⇒ 최적 추정 값(Optimal State Estimate)
         <!-- <img src = "./images/pic-0009.jpg"/> -->
-        ![img1.daumcdn.jpg](/_posts/images/pic-0009.jpg)
+        ![pic-0009](https://user-images.githubusercontent.com/107748183/198959056-19933bd9-3450-4f6d-9d68-150b76bb14af.jpg)
+
         
         → 예측값과 측정값의 각각의 Gaussian Distribution을 이용해 상태를 업데이트 해 최적의 추정값을 얻습니다.
         
@@ -96,7 +97,7 @@ Last Updated Date : 2022-04-15
 - 좀 더 직관적으로 설명하자면 “어떤 경향이 있을 때, 이를 기준으로 새로운 데이터가 얼마나 일어나기 힘든 값인지?” 를 나타내주는 척도입니다.
     - ex. (0,0) 으로부터 네 점 (1,-1), (1,1), (1,-1), (-1,-1) 의 유클리드 거리는 모두 같지만, Mahalanobis 거리는 (1,-1)과 (-1,1)이 매우 큰 것을 볼 수 있습니다.
         
-        ![출처 : [https://kr.mathworks.com/help/stats/mahal.html](https://kr.mathworks.com/help/stats/mahal.html)](images/pic-0002.png)
+        ![출처 : [https://kr.mathworks.com/help/stats/mahal.html](https://kr.mathworks.com/help/stats/mahal.html)](https://user-images.githubusercontent.com/107748183/198959108-f34762d7-2d1c-49ff-9d5c-92f77384a76a.png)
         
         출처 : [https://kr.mathworks.com/help/stats/mahal.html](https://kr.mathworks.com/help/stats/mahal.html)
         
@@ -113,9 +114,9 @@ $$
 IoU = {Overlapping\;Region \over Combined \;Region}  
 $$
 
-![image9.png](images/pic-0008.png)
+![image9.png](https://user-images.githubusercontent.com/107748183/198959184-05df2325-3da6-4ec8-b533-7a22e80dbd3c.png)
 
-![image12.png](images/pic-0003.png)
+![image12.png](https://user-images.githubusercontent.com/107748183/198959230-7d2a2b2a-119a-4109-b7e4-698f895fde57.png)
 
 ### SORT(Simple Online and Realtime Tracking)
 
@@ -128,7 +129,7 @@ $$
         
 - Flow Chart of SORT
     
-    ![출처 : 우측상단 표기](images/pic-0007.png)
+    ![출처 : 우측상단 표기](https://user-images.githubusercontent.com/107748183/198959241-dd12cb2a-f41c-487a-818c-09082374a79c.png)
     
     출처 : 우측상단 표기
     
@@ -149,13 +150,13 @@ $$
 - Limitations of SORT?
     - Occlusion(폐색, 가려짐) 문제에 취약합니다.
         
-        ![출처 : Measurement-wise Occlusion in Multi-object Tracking](images/pic-0006.png)
+        ![출처 : Measurement-wise Occlusion in Multi-object Tracking](https://user-images.githubusercontent.com/107748183/198959240-fbb088dd-fd63-4207-9bb0-857d5d67fbcb.png)
         
         출처 : Measurement-wise Occlusion in Multi-object Tracking
         
     - ID Switching : 다양한 객체들이 움직일 때, 서로의 ID 추적이 변경되는 ID Switching에 취약합니다.
         
-        ![image17.png](images/pic-0005.png)
+        ![image17.png](https://user-images.githubusercontent.com/107748183/198959235-94e2718d-4470-476d-9ea3-38cfb69dab7e.png)
         
     
 
@@ -180,13 +181,13 @@ DeepSORT에서는
 
 #### **2. Matching Cascade** 로직으로 더 정확한 추적을 가능케 하였습니다.
 
-![출처 : [https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association_fig2_353256407](https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association_fig2_353256407)](images/pic-0001.jpg)
+![출처 : [https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association_fig2_353256407](https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association_fig2_353256407)](https://user-images.githubusercontent.com/107748183/198959224-389e3dc3-8fbf-46a9-b066-97a5bb34eb91.jpg)
 
 출처 : [https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association_fig2_353256407](https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association_fig2_353256407)
 
 아래는 좀 더 자세한 FlowChart입니다.
 
-![출처 : 좌측상단 표기](images/pic-0004.jpg)
+![출처 : 좌측상단 표기](https://user-images.githubusercontent.com/107748183/198959233-3e3eb144-e593-4d32-8402-57e5585f67e7.jpg)
 
 출처 : 좌측상단 표기
 
@@ -215,11 +216,11 @@ DeepSORT에서는
 
 DeepSORT 에서는 Matching Cascade 단계를 추가하여 **개체의 상태를 좀 더 디테일하게 추출**하고자 했습니다.
 
-![Untitled](images/pic-0017.png)
+![Untitled](https://user-images.githubusercontent.com/107748183/198959220-820aecee-0226-48fc-ae16-c0cbf8bf0c74.png)
 
 다소 복잡해보이는 과정이지만 보다 보기 간단하게 Flowchart로 나타낸 Matching Cascade 흐름을 따라서 차근차근 알아보겠습니다.
 
-![Untitled](images/pic-0011.png)
+![Untitled](https://user-images.githubusercontent.com/107748183/198959201-8e59d537-d115-459c-980b-19647e199a9a.png)
 
 - **distance 1 : Mahalanobis Distance**
     - 평균과의 거리가 표준편차의 몇 배인지 나타내는 값입니다.
@@ -236,11 +237,11 @@ DeepSORT 에서는 Matching Cascade 단계를 추가하여 **개체의 상태를
     - 물체가 가지는 모양을 판단하기 위한 Distance(Cosine 유사도를 활용한 Distance)
     - Cosine 유사도
     
-    ![Untitled](images/pic-0012.png)
+    ![Untitled](https://user-images.githubusercontent.com/107748183/198959202-0b3d5afb-a5b4-4051-bf72-d03beeefc245.png)
     
     - Cosine Distance
         
-        ![Screenshot from 2022-03-21 18-09-27.png](images/pic-0010.png)
+        ![Screenshot from 2022-03-21 18-09-27.png](https://user-images.githubusercontent.com/107748183/198959195-5e08dc5d-80ba-4d20-ad01-faeae2b7bfe7.png)
         
         - x4, x0, x1 점과 새로운 점 x14가 주어졌을 때 흔히 생각하는 거리인 유클리드 거리는 점 x4가 가장 가깝지만, 코사인 거리는 점 x1이 가장 가깝게 됩니다.
         
@@ -251,15 +252,15 @@ DeepSORT 에서는 Matching Cascade 단계를 추가하여 **개체의 상태를
         
         1. 각 bounding box detction d_j에 대해 절대값이 1인 appearance descriptor “r_j”(appearance descriptor : 외형 유사도를 판별하는 척도) 계산
         
-        ![Untitled](images/pic-0013.png)
+        ![Untitled](https://user-images.githubusercontent.com/107748183/198959206-862f359b-6cf8-4887-8f9b-3e4e95748b28.png)
         
         1. 각 트랙 k에 대한 apperance descriptor 마지막 100개를 가지는 갤러리 R_k를 keep해둠
         
-        ![Untitled](images/pic-0014.png)
+        ![Untitled](https://user-images.githubusercontent.com/107748183/198959209-e6bd5cd6-342d-486a-9f8a-834c34526975.png)
         
         1. apperance space에서 i번째 track과 j번째 detection 사이의 제일 작은 cosine distance를 측정
             
-            ![Untitled](images/pic-0015.png)
+            ![Untitled](https://user-images.githubusercontent.com/107748183/198959212-d7ebe315-e4e2-4c40-9312-aa89ba3b4518.png)
             
         
         → 예측된 Track의 Motion 동일한 정도가 높을 경우, 이를 반영하는 지표로써 사용하게 됩니다.
@@ -278,7 +279,7 @@ DeepSORT 에서는 Matching Cascade 단계를 추가하여 **개체의 상태를
     
     이를 통해 외형 유사도 r_j 는 0~1의 값을 같게 되어 대상을 추적하는 값으로 사용됩니다.
     
-    ![Untitled](images/pic-0016.png)
+    ![Untitled](https://user-images.githubusercontent.com/107748183/198959215-2be59d29-abcb-4951-864b-4a733891d6ac.png)
     
 
 ---

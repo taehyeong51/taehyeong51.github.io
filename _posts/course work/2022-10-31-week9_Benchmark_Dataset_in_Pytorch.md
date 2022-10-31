@@ -124,8 +124,7 @@ plt.show()
 
 
     
-![png](output_4_0.png)
-    
+![output_4_0](https://user-images.githubusercontent.com/107748183/198958929-db567afb-12c6-4ef9-84e0-de90c65e6471.png)    
 
 
 # 2. Make Own Dataset
@@ -197,8 +196,7 @@ print("Label :", labels_map[int(label)])
 
 
     
-![png](output_12_1.png)
-    
+![output_12_1](https://user-images.githubusercontent.com/107748183/198958945-ac4fd41f-aa2a-4337-a3e3-1c326eb4e5b4.png)    
 
 
     Label : Sandal
