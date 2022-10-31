@@ -17,6 +17,7 @@ categories:
     - 논문리뷰
 tags:
     - CV
+use_math: true
 ---
 
 
