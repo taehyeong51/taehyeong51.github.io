@@ -2,10 +2,11 @@
 title: "[논문리뷰] DeepSORT"
 date: 2022-10-28T15:25:25.657890+09:00
 lastmod: 2022-10-28T15:25:25.657890+09:00
+toc: true
+toc_sticky: true
 hero: 
 url: //
 description: 
-tags: 
 menu:
   sidebar:
     name: 논문리뷰

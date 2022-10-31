@@ -1,13 +1,14 @@
 ---
 title: "[학부수업] 딥러닝의 이해 - 9주차-1"
 excerpt: "딥러닝의 이해 - 9주차-1 수업 내용"
+toc: true
+toc_sticky: true
 
 date: 2022-10-28T15:25:25.657890+09:00
 lastmod: 2022-10-28T15:25:25.657890+09:00
 hero: 
 url: //
 description: 
-tags: 
 menu:
   sidebar:
     name: 학부수업
