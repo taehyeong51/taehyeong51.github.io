@@ -30,19 +30,16 @@ Last Updated Date : 2022-10-31
 
 ---
 
-## Deep SORT란?
+# 0. Deep SORT란?
 
 - Object Tracking Frame Work(객체 추적 프레임 워크) 로 SORT(Simple Online and Realtime Tracking)에 **Deep Learning**을 접목시켜 성능향상을 이룬 Frame Work 입니다.
     
     → SORT란 무엇이며, 어떻게 SORT에 Deep Learning을 접목시켜 성능 향상을 이루어냈는지 알아보겠습니다.
     
-- 이해를 돕기 위해 다음과 같은 순서대로 설명하겠습니다.
 
 ---
 
----
-
-## 1. Research Background
+# 1. Research Background
 
 - Deep SORT 를 이해하기 위한 사전 지식들에 대해 미리 알아보겠습니다.
 
@@ -53,7 +50,7 @@ Last Updated Date : 2022-10-31
 | IoU(Intersection Over Union) |
 | SORT(Simple Online and Real time Tracking) |
 
-### Kalman Filter
+## Kalman Filter
 
 #### **Kalman Filter란?**
 
