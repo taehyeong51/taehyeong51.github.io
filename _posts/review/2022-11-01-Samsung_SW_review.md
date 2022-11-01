@@ -45,6 +45,15 @@ use_math: true
 상반기 삼성전자 코딩테스트 응시 당시까지만 하더라도 손가락 까딱하나 못했던 기억이 있어 부랴부랴 여름부터 코딩테스트 준비를 시작했습니다.<br> 
 인턴 생활 진행하면서 랩에 있던 선배 및 동기와 함께 코딩스터디를 진행하였고 굉장히 큰 도움이 됐습니다. 자연스럽게 혼자 진행하는 것보다 더 체계적으로 진행하게 되며, 함께 진행하는 스터디원들의 코드는 게으른 스스로를 계속 채찍질 하는 원동력이 되었습니다..☺ <br><br>
 
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/107748183/199222871-2e996e90-b9cf-4af4-848b-804d7f37987e.png" width="500" />
+  <img src="https://user-images.githubusercontent.com/107748183/199222875-87ea24e3-26f8-49aa-8233-d7e5518fbe3f.png" width="500" /> 
+</p>
+<figcaption> 큰 도움이 된 노션을 통한 코딩스터디 </figcaption>
+
+<br><br>
+
+
 `6~7월` <br>
 inflearn 강의를 들으면서 알고리즘 공부를 진행했습니다.<br>
 수강한 강의 : [Inflearn](https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/dashboard) <br>
