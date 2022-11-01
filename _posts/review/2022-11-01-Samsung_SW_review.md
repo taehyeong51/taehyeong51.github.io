@@ -26,6 +26,7 @@ use_math: true
 ---
 
 # 1. SW 역량테스트 정보
+---
 
 **지원 사업부 및 직무 정보** : dx 사업부, 부문공통-SW개발 <br>
 **서류 지원 마감 날짜** : 2022/09/14 <br>
@@ -41,14 +42,15 @@ use_math: true
 <br>
 
 # 2. 준비 내용
+---
 
 `코테 공부` <br>
 상반기 삼성전자 코딩테스트 응시 당시까지만 하더라도 손가락 까딱하나 못했던 기억이 있어 부랴부랴 여름부터 코딩테스트 준비를 시작했습니다.<br> 
 인턴 생활 진행하면서 랩에 있던 선배 및 동기와 함께 코딩스터디를 진행하였고 굉장히 큰 도움이 됐습니다. 자연스럽게 혼자 진행하는 것보다 더 체계적으로 진행하게 되며, 함께 진행하는 스터디원들의 코드는 게으른 스스로를 계속 채찍질 하는 원동력이 되었습니다..☺ <br><br>
 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/107748183/199222871-2e996e90-b9cf-4af4-848b-804d7f37987e.png" width="500" />
-  <img src="https://user-images.githubusercontent.com/107748183/199222875-87ea24e3-26f8-49aa-8233-d7e5518fbe3f.png" width="500" /> 
+  <img src="https://user-images.githubusercontent.com/107748183/199222871-2e996e90-b9cf-4af4-848b-804d7f37987e.png" width="400" />
+  <img src="https://user-images.githubusercontent.com/107748183/199222875-87ea24e3-26f8-49aa-8233-d7e5518fbe3f.png" width="400" /> 
 </p>
 <figcaption> 큰 도움이 된 노션을 통한 코딩스터디 </figcaption>
 
@@ -71,6 +73,7 @@ inflearn 강의를 들으면서 알고리즘 공부를 진행했습니다.<br>
 <br>
 
 # 3. 문제 후기
+---
 
 용인 삼성전자 인재개발원으로 오후 시간대 시험에 배정되어 코딩 테스트를 치르고 왔습니다.<br>
 서울에서 버스를 타고 가면 1시간 30분 정도 소요되었던 것 같습니다. 상반기때도 그랬지만 비말 마스크를 쓰고 가면 입구에서 kf94 마스크를 나눠주셔서 갈아쓰고 입장해야 했습니다. <br><br>
