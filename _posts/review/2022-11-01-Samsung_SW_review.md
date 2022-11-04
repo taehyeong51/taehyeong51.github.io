@@ -96,7 +96,7 @@ inflearn 강의를 들으면서 알고리즘 공부를 진행했습니다.<br>
     -> Visual Studio Code, PyCharm 과 같은 IDE들 디버깅 툴 활용법 익히기<br><br>
 
 자세한 문제 풀이 및 후기는 아래 포스트를 참조하시면 좋겠습니다.<br>
-[후기]() <br><br>
+[후기](https://taehyeong51.github.io/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-CodeTree-%EC%BD%94%EB%93%9C%ED%8A%B8%EB%A6%AC-%EB%B9%B5(2022-%ED%95%98%EB%B0%98%EA%B8%B0-%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-SW-%EC%97%AD%EB%9F%89%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C)/) <br><br>
 
 응시 후 약 2주 정도 지나 결과가 나왔고 역시 한 문제를 다 못푼지라 불합격하였습니다.<br><br>
 오픈카톡방 사람들 후기를 보면 기존 유형과 같았던 시뮬레이션 유형인 문제 1번의 경우 테스트케이스 10개를 모두 통과하면 1솔로 거의 합격하셨지만 문제 2번의 경우 풀이 방법에 따라 최적화 때문에 시간 초과로 테스트케이스를 모두 통과하고도 불합한 사례가 종종 보였습니다. <br><br>
