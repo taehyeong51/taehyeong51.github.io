@@ -29,7 +29,7 @@ use_math: true
 
 딥러닝의 이해 10주차 2차시 수업 과정인 CNN으로 MNIST 분류하기 진행하겠습니다.
 
-**Import**
+# 1. Dataset Import
 
 
 ```python
@@ -51,11 +51,16 @@ device = torch.device("cuda" if USE_CUDA else "cpu")
 # 사용 device 출력
 print("다음 기기로 학습합니다. :", device)
 ```
+>출력
 
     다음 기기로 학습합니다. : cuda
     
+<br>
 
-**초기설정 : Batch, Epoch,Seed**
+
+<br>
+
+# 2. 초기설정 : Batch, Epoch,Seed
 
 
 ```python
@@ -74,8 +79,12 @@ batch_size = 100
 # learning rate = 0.001
 learning_rate = 0.001
 ```
+<br>
 
-**MNIST Dataset**
+
+<br>
+
+# 3. MNIST Dataset
 
 
 ``` python
@@ -92,7 +101,13 @@ torchvision.datasets.MNIST(root: str, train: bool = True, transform: Optional[Ca
 
 이외 parameter에 대한 상세한 설명은 [pytorch - MNIST](https://pytorch.org/vision/stable/generated/torchvision.datasets.MNIST.html#torchvision.datasets.MNIST) 를 참조하시기 바랍니다.
 
+<br>
 
+---
+
+<br>
+
+**MNIST Dataset Download**
 ```python
 '''
 torchvision에서 dsets로 import 한 datasets 통해 
@@ -120,9 +135,16 @@ data_loader = DataLoader(dataset = mnist_train,
 
 ```
 
+<br>
+
+
+
+<br>
+
+# 4. CNN Network, Loss and Optimizer
 **Network, loss, and Optimizer**
 
-class를 설정하기 위한 함수들
+class를 정의
 
 `conv2d` - [Pytorch Conv2d 함수 다루기](https://gaussian37.github.io/dl-pytorch-conv2d/)
 
@@ -167,6 +189,13 @@ criterion = nn.CrossEntropyLoss().to(device) # 내부적으로 Softmax 함수 �
 optimizer = torch.optim.Adam(net.parameters(), lr = learning_rate)
 ```
 
+<br>
+
+
+
+<br>
+
+# 5. Training & Inference
 **Training**
 
 
@@ -195,6 +224,7 @@ for epoch in range(training_epochs):
 
 print("Learning Finished")
 ```
+>출력 
 
     Epoch: 0001, cost = 0.225624949
     Epoch: 0002, cost = 0.062987588
@@ -213,6 +243,13 @@ print("Learning Finished")
     Epoch: 0015, cost = 0.006478167
     Learning Finished
     
+
+<br>
+
+---
+
+<br>
+
 
 **Test Accuracy**
 
@@ -238,6 +275,7 @@ with torch.no_grad():
   plt.imshow(mnist_test.test_data[r:r+1].view(28,28), cmap='Greys', interpolation = 'nearest')
   plt.show()
 ```
+>출력 
 
     Accuracy: 0.9830999970436096
     Label: 8
@@ -248,6 +286,13 @@ with torch.no_grad():
     
 ![output_14_2](https://user-images.githubusercontent.com/107748183/200156018-f47c8bdc-9949-4b84-9c14-830dedea238d.png)
     
+
+<br>
+
+---
+
+<br>
+
 
 
 **Reference**
