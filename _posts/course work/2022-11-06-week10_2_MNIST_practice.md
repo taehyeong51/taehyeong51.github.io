@@ -2,8 +2,8 @@
 title: "[학부수업] 딥러닝의 이해 - 10주차-2 : MNIST 분류하기 with Simple CNN, Pytorch"
 excerpt: "딥러닝의 이해 - 10주차-2 수업 내용"
 
-date: 2022-11-06T15:25:25.657890+09:00
-lastmod: 2022-11-06T15:25:25.657890+09:00
+date: 2022-11-06T14:49:25.657890+09:00
+lastmod: 2022-11-06T14:49:25.657890+09:00
 toc: true
 toc_sticky: true
 hero: 
