@@ -29,8 +29,10 @@ use_math: true
 
 딥러닝의 이해 10주차 2차시 수업 과정인 CNN으로 MNIST 분류하기 진행하겠습니다.
 
-# 1. Dataset Import
+# 1. Library Import & Device Set
 
+필요한 라이브러리들을 Import 합니다. <br>
+torch를 통해 GPU Device가 사용가능한지 확인하고 device를 GPU 또는 CPU로 설정합니다.
 
 ```python
 import torch
@@ -60,8 +62,9 @@ print("다음 기기로 학습합니다. :", device)
 
 <br>
 
-# 2. 초기설정 : Batch, Epoch,Seed
+# 2. 초기설정 : Batch, Epoch, Seed, Learning Rate
 
+Training을 위한 Batch, Epoch, Seed, Learning Rate값을 설정합니다.
 
 ```python
 #for reproducibility (재현성을 위해 동일한 방식으로 Shuffle 하기 위한 Random 값 고정)
@@ -86,6 +89,9 @@ learning_rate = 0.001
 
 # 3. MNIST Dataset
 
+torch Library를 통해 MNIST Dataset을 download합니다.
+<br><br>
+**torchvision.datasets.MNIST**
 
 ``` python
 torchvision.datasets.MNIST(root: str, train: bool = True, transform: Optional[Callable] = None, target_transform: Optional[Callable] = None, download: bool = False)
@@ -142,6 +148,7 @@ data_loader = DataLoader(dataset = mnist_train,
 <br>
 
 # 4. CNN Network, Loss and Optimizer
+학습할 네트워크를 class로 선언합니다. <br><br>
 **Network, loss, and Optimizer**
 
 class를 정의
@@ -196,6 +203,7 @@ optimizer = torch.optim.Adam(net.parameters(), lr = learning_rate)
 <br>
 
 # 5. Training & Inference
+Trainig과 Inference를 진행합니다. <br><br>
 **Training**
 
 
@@ -297,10 +305,10 @@ with torch.no_grad():
 
 **Reference**
 
-1. Conv2d 함수 : https://gaussian37.github.io/dl-pytorch-conv2d/
+1. Conv2d 함수 : <https://gaussian37.github.io/dl-pytorch-conv2d/>
 
-2. Channel Size Fix : https://discuss.pytorch.org/t/runtimeerror-expected-3d-unbatched-or-4d-batched-input-to-conv2d-but-got-input-of-size-1-1-374-402-3/154535
+2. Channel Size Fix : <https://discuss.pytorch.org/t/runtimeerror-expected-3d-unbatched-or-4d-batched-input-to-conv2d-but-got-input-of-size-1-1-374-402-3/154535>
 
-3. nn.functional : https://thebook.io/080289/ch05/02-16/
+3. nn.functional : <https://thebook.io/080289/ch05/02-16/>
 
-4. Pytorch로 시작하는 딥러닝 입문 : https://wikidocs.net/63565
+4. Pytorch로 시작하는 딥러닝 입문 : <https://wikidocs.net/63565>
