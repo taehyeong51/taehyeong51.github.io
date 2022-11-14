@@ -37,23 +37,25 @@ Last Updated Date : 2022-10-31
     
     → SORT란 무엇이며, 어떻게 SORT에 Deep Learning을 접목시켜 성능 향상을 이루어냈는지 알아보겠습니다.
     
+<br>
 
----
+
 
 # 1. Research Background
 
 - Deep SORT 를 이해하기 위한 사전 지식들에 대해 미리 알아보겠습니다.
 
-| Kalman Filter |
+| Prior Knowledges |
 | --- |
+| Kalman Filter |
 | Hungarian Algorithm |
 | Mahalanobis Distance |
 | IoU(Intersection Over Union) |
 | SORT(Simple Online and Real time Tracking) |
 
-## Kalman Filter
+Kalman Filter
 
-#### **Kalman Filter란?**
+**Kalman Filter란?**
 
 - **이전 프레임(또는 stage)에 등장한 개체를 이용하여 다음 프레임 개체의 위치를 예측하고 측정하는 방법**입니다.
 - How does Kalman Filter predict?
@@ -71,9 +73,9 @@ Last Updated Date : 2022-10-31
     또한 Tracking을 위한 영상에서는 물체의 이동이 선형적이기 때문에 마찬가지로 처리에 용이합니다.
     
 
-### Assignment Problem(할당 문제)
+**Assignment Problem(할당 문제)**
 
-#### Assignment Problem이란?
+**Assignment Problem이란?**
 
 - 다수의 공급처와 수요처가 존재하며, 수용비용이 모두 다를 때, 총 수송비용의 합이 최소가 되는 최적해를 찾는 문제입니다.
     - ex. “**노동자**(에어컨 수리기사) = **공급처** -> **작업**(에어컨 수리) = **수요처** 에 대해 **가장 적은 비용**의 해법”을 얻는 일련의 과정이라 할 수 있습니다.
@@ -81,15 +83,15 @@ Last Updated Date : 2022-10-31
     - 할당 문제의 대표적인 해결법으로 Hungarian Algorithm이 있습니다.
     
 
-### Hungarian Algorithm
+**Hungarian Algorithm**
 
-#### Hungarian Algorithm이란?
+**Hungarian Algorithm이란?**
 
 - 할당문제 & 헝가리안 알고리즘 : [https://gazelle-and-cs.tistory.com/29](https://gazelle-and-cs.tistory.com/29) 참조
 
-### Mahalanobis Distance
+**Mahalanobis Distance**
 
-#### Mahalanobis Distance란?
+**Mahalanobis Distance란?**
 
 - 평균과의 거리가 표준 편차의 몇 배인지 나타내는 값입니다.
 - 좀 더 직관적으로 설명하자면 “어떤 경향이 있을 때, 이를 기준으로 새로운 데이터가 얼마나 일어나기 힘든 값인지?” 를 나타내주는 척도입니다.
@@ -102,9 +104,9 @@ Last Updated Date : 2022-10-31
 - Why Do We Use Mahalanobis Distance?
     - 어떤 데이터가 진짜 데이터인지, 가짜 데이터(Noise, False Alarm 등)인지 구별하는 용도로 사용하게 됩니다.
 
-### IoU(Intersection over Union)
+**IoU(Intersection over Union)**
 
-#### IoU란?
+**IoU란?**
 
 - 겹치는 영역에 대해 수치화한 값을 말합니다.
 
@@ -116,9 +118,9 @@ $$
 
 ![image12.png](https://user-images.githubusercontent.com/107748183/198959230-7d2a2b2a-119a-4109-b7e4-698f895fde57.png)
 
-### SORT(Simple Online and Realtime Tracking)
+**SORT(Simple Online and Realtime Tracking)**
 
-#### SORT란?
+**SORT란?**
 
 - 실시간 추적을 위해 Object들을 효율적으로 연관(Associate)지어주는 MOT(Multi Object Tracking) 입니다.
     - MOT란?
@@ -158,7 +160,7 @@ $$
         
     
 
----
+<br>
 
 ## 2. Research Objectivs
 
@@ -173,11 +175,11 @@ DeepSORT에서는
 
 앞선 문제점들을 해결하기 위해 Deep SORT에서는 
 
-#### 1. **Deep Appearance Descriptor**로 **Re-identification 모델을 적용**해서 **ID** **Switching** 문제를 해결했습니다.
+**1.Deep Appearance Descriptor**로 **Re-identification 모델을 적용**해서 **ID** **Switching** 문제를 해결했습니다.
 
 또한 
 
-#### **2. Matching Cascade** 로직으로 더 정확한 추적을 가능케 하였습니다.
+**2. Matching Cascade** 로직으로 더 정확한 추적을 가능케 하였습니다.
 
 ![출처 : [https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association_fig2_353256407](https://www.researchgate.net/figure/Architecture-of-Deep-SORT-Simple-online-and-real-time-tracking-with-deep-association_fig2_353256407)](https://user-images.githubusercontent.com/107748183/198959224-389e3dc3-8fbf-46a9-b066-97a5bb34eb91.jpg)
 
@@ -189,7 +191,7 @@ DeepSORT에서는
 
 출처 : 좌측상단 표기
 
-### Process of DeepSORT
+**Process of DeepSORT**
 
 1. Detection
     1. 이미지 input으로 받아 존재하는 물체에 대해 Bounding Box 정보 입력받음
@@ -210,7 +212,7 @@ DeepSORT에서는
     1. 현재 가진 Matched Tracks를 다음 frame 위해 Bbox 예측 / Track 등장 횟수 3회 이상 시 상태 “Confirmed”로 변경
 8. Reculsive
 
-### Matching Cascade
+**Matching Cascade**
 
 DeepSORT 에서는 Matching Cascade 단계를 추가하여 **개체의 상태를 좀 더 디테일하게 추출**하고자 했습니다.
 
@@ -268,7 +270,7 @@ DeepSORT 에서는 Matching Cascade 단계를 추가하여 **개체의 상태를
         → Hyper parameter lambda 를 이용하여 가중치를 조절하여 사용합니다.
         
 
-### Deep Appearance Descriptor
+**Deep Appearance Descriptor**
 
 - CNN Architecture를 사용하여 d2에 들어가는 appearance 유사도를 측정하는 feature를 측정합니다.
 - [d2](https://www.notion.so/cfc99ad67ad446afb16eb862c732a556)와 더불어 SORT 알고리즘에 Deep Learning이 필요한 당위성을 보여주는 가장 큰 부분입니다.
@@ -280,16 +282,83 @@ DeepSORT 에서는 Matching Cascade 단계를 추가하여 **개체의 상태를
     ![Untitled](https://user-images.githubusercontent.com/107748183/198959215-2be59d29-abcb-4951-864b-4a733891d6ac.png)
     
 
+<br>
+
+## 4. Experimental Results
+
+MOT16 benchmark에 대하여 우리의 tracker의 성능을 평가합니다. 이 benchmark는 7개의 도전적인 test sequences에 대해 추적 성능을 평가하는데, 움직이는 카메라의 정면 촬영 장면과 위에서 아래로 감시하는 설정 또한 포함하고 있습니다. 그들은 훌륭한 성능을 제공하기 위해 public, private 데이터셋을 모아 Faster RCNN을 훈련시켰습니다. 동등한 비교를 위해, 똑같은 detection에 대해 SORT를 재학습시켰습니다.
+
+test sequence에 대한 평가에서 $\lambda =0, A_{max}=30$ 프레임으로 설정했습니다. detection의 경우 0.3이라는 confidence score에 대한 threshold를 설정하였습니다. 우리의 모델에서 남은 파라미터의 경우 benchmark에서 제공되는 분리된 훈련 sequence에서 발견할 수 있습니다. 평가 metric은 다음과 같습니다.
+
+**MOTA(Multi-object tracking accuracy)** : false positive, false negative, identity switch 측면에서의 전반적인 tracking accuracy
+
+**MOTP(Multi-object tracking precision)** : ground-truth와 기록된 위치 사이의 bounding box overlap 측면에서의 전반적인 tracking accuracy
+
+**MT(Mostly Tracked)** : 생명주기의 최소 80%는 동일한 라벨을 가지고 있는 ground-truth track의 비율
+
+**ML(Mostly Lost)** : 생명주기의 최대 20%만 추적된 ground-truth track의 비율
+
+**ID(Identity Switches)** : ground-truth track의 기록된 identity switch 횟수
+
+**FM(Fragmentation)** : missing detection에 의해 track이 방해를 받은 횟수
+<br><br><br>
+![Table2](https://user-images.githubusercontent.com/107748183/201654047-ea1592c4-71d9-49e4-ba30-754510719565.png)
+
+우리의 모델인 Deep SORT는 성공적으로 **identity switch** 수를 감소시켰습니다. SORT와 비교했을 때, id switch의 경우 1423에서 781로 약 45%가 감소하였습니다. occlusion이나 miss로부터 객체의 identity를 유지하기 위해 track 분열의 경우 미세하게 증가하였습니다. MT는 상당한 증가를, ML은 감소를 보였습니다. 전반적으로, appearance 정보의 결합으로 **물체의 가려짐(폐색)에서도 성공적으로 identity를 유지**할 수 있었습니다.
+
+<br><br><br>
+![Fig. 1](https://user-images.githubusercontent.com/107748183/201654021-d326ec37-f246-47d9-80d3-caed4299c305.png)
+
+우리의 방식은 또한 다른 online tracking 프레임워크에 대하여 강력한 경쟁자이기도 합니다. 특히, 우리의 접근 방식은 모든 online 방식 중에서 경쟁력있는 MOTA score, track fragmentation, false negative를 유지하면서도, 가장 적은 identity switch를 반환합니다. 기록된 tracking accuracy는 많은 양의 false positive로 인해 대부분 손상됩니다. MOTA score에 대한 전반적인 영향력이 주어졌을 때, detection에 큰 confidence threshold를 사용하는 것은 잠재적으로 큰 마진에 의해 우리 알고리즘의 기록된 성능을 증가시킬 수 있습니다. 그러나, tracking output을 시각적으로 점검하는 것은 이러한 false positives들이 대부분 정적인 장면에서 고립된 detector 응답들로부터 생성된다는 것을 보여줍니다. 상대적으로 큰 track의 최대 허용 나이 때문에 종종 물체에 대한 trajectory에 더 흔하게 사용됩니다. 동시에, 우리는 잘못된 알림으로부터 자주 track jumping이 발생하지 않았습니다. 대신에, 기록된 객체의 위치에서 상대적으로 안정적이고 변화가 없는 track들을 주로 생성해냈습니다. 우리의 실험은 feature를 생성하는데 걸리는 시간의 거의 절반인 20Hz가 소요됐습니다. 따라서, 현대의 GPU가 주어졌을 때 시스템의 계산이 효율적이고 실시간에서 작동할수 있습니다. 
+<br>
+
+
+## 5. Conclusion
 ---
+해당 논문에서는 사전 훈련된 association metric을 통해 외형 정보를 통합한 SORT에 대한 확장을 제시했습니다. 이를 통해, 더 오랫동안 방해물에 가려져 있어도 추적할 수 있게 되면서, SORT를 온라인 추적 알고리즘에서 SOTA(State Of The Art : 사전 학습된 현재 최고 수준의 신경망)수준의 강력한 경쟁자로 자리매김하고 있습니다. 알고리즘은 실행이 간편하고, 실시간 구현이 가능합니다.
 
-### 4. Experimental Results
+<br>
 
-작성중
 
+## 6. DeepSORT를 통해 직접 youtube 영상의 객체를 tracking한 결과 비디오
 ---
+```python
+# clone repository for deepsort with yolov4
+!git clone https://github.com/theAIGuysCode/yolov4-deepsort
+# step into the yolov4-deepsort folder
+%cd yolov4-deepsort/
+# download yolov4 model weights to data folder
+!wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights -P data/
+! pip uninstall tensorflow
+! pip install tensorflow==2.3.0
+# Convert darknet weights to tensorflow model
+!python save_model.py --model yolov4
+# run DeepSort with YOLOv4 Object Detections as backbone (enable --info flag to see info about tracked objects)
+!python object_tracker.py --video ./data/video/Seoul.mp4 --output ./outputs/tracker.avi --model yolov4 --dont_show --info
+# define helper function to display videos
+import io 
+from IPython.display import HTML
+from base64 import b64encode
+def show_video(file_name, width=640):
+  # show resulting deepsort video
+  mp4 = open(file_name,'rb').read()
+  data_url = "data:video/mp4;base64," + b64encode(mp4).decode()
+  return HTML("""
+  <video width="{0}" controls>
+        <source src="{1}" type="video/mp4">
+  </video>
+  """.format(width, data_url))
+  # convert resulting video from avi to mp4 file format
+import os
+path_video = os.path.join("outputs","tracker.avi")
+%cd outputs/
+!ffmpeg -y -loglevel panic -i tracker.avi output.mp4
+%cd ..
 
-### 5. Conclusion
-
-작성중
+# output object tracking video
+path_output = os.path.join("outputs","output.mp4")
+show_video(path_output, width=960)
+# 출처 : https://www.youtube.com/watch?v=_zrNUzDS8Zc&t=309s
+```
 
 [https://www.youtube.com/watch?v=7BtEOCb3wMk](https://www.youtube.com/watch?v=7BtEOCb3wMk)
