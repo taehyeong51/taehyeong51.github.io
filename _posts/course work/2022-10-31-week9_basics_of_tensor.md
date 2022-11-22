@@ -1,5 +1,5 @@
 ---
-title: "[학부수업] 딥러닝의 이해 - 9주차-1"
+title: "[학부수업] Practicing Pytorch (9-1)"
 excerpt: "딥러닝의 이해 - 9주차-1 수업 내용"
 toc: true
 toc_sticky: true

@@ -1,5 +1,5 @@
 ---
-title: "[학부수업] 딥러닝의 이해 - 9주차-2"
+title: "[학부수업] Benchmark Dataset in Pytorch (9-2)"
 excerpt: "딥러닝의 이해 - 9주차-2 수업 내용"
 
 date: 2022-10-28T15:25:25.657890+09:00
