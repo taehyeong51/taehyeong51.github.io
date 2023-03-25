@@ -176,7 +176,7 @@ SKT FLY AI Challenger에 대한 정보가 많지 않아서인지, 교육 시작�
       <figcaption>매일 밤 늦게까지 열일해준 팀원들</figcaption>
     </figure>
     <figure>
-      <img src="https://user-images.githubusercontent.com/107748183/227701849-4c67628d-8b21-43e0-a032-bb3aa13a49f2.jpg">
+      <img src="https://user-images.githubusercontent.com/107748183/227701852-969ef47a-5d48-4366-9fa1-e6d5c85e21c7.jpg">
       <figcaption>어린이집과 진행한 프로젝트 내용 시연</figcaption>
     </figure>
     <figure>
